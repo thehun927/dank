@@ -2,17 +2,17 @@
 
 Loop {
 Crime()
-Sleep 1000
+Sleep 2000
 Search()
-Sleep 1000
+Sleep 2000
 Postmeme()
-Sleep 1000
+Sleep 2000
 Main()
 Sleep 1000
-Sell()
-Sleep 1000
+;Sell()
+;Sleep 1000
 Save()
-Sleep 500
+Slow()
 }
 
 
@@ -78,4 +78,10 @@ Sell() {
 Save() {
 	Send, p deposit all
 	Send, {enter}
+}
+
+Slow() {
+	Random, rand, 13, 58
+	delay := rand * 1000
+	Sleep delay
 }
